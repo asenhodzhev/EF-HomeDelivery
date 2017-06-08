@@ -23,6 +23,9 @@ namespace HD.DbContext.Migrations
             {
                 Initializer.SeedUser(context);
             }
+
+            Initializer.SeedCities(context);
+            Initializer.Restaurants(context);
         }
     }
 }

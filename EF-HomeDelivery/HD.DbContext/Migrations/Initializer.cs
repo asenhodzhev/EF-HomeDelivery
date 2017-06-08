@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HD.Entities;
+using HD.Entities.Common;
 using ITGigs.Common.Extensions;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -58,6 +59,28 @@ namespace HD.DbContext.Migrations
             };
             user.Roles.Add(new IdentityUserRole { RoleId = ownerRole.Id, UserId = user.Id });
             context.Users.Add(user);
+        }
+
+        public static void SeedCities(ApplicationDbContext context)
+        {
+            context.Cities.AddOrUpdate(
+                c => c.CityName,
+                new City("Plovdiv"),
+                new City("Sofia"),
+                new City("Varna"),
+                new City("Pleven"),
+                new City("Stara Zagora")
+            );
+        }
+
+        public static void Restaurants(ApplicationDbContext context)
+        {
+            context.Restaurants.AddOrUpdate(
+                r => r.RestaurantName,
+                new Restaurant("Happy"),
+                new Restaurant("Happy Sushi"),
+                new Restaurant("Captain Cook")
+            );
         }
     }
 }
