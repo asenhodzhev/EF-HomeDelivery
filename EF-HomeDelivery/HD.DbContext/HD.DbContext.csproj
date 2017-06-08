@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Initializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +63,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\EF-Project\EF-Project.Common\EF-Project.Common.csproj">
+      <Project>{C83F68BC-6C78-4A71-90D1-B442158989D4}</Project>
+      <Name>EF-Project.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HD.Entities\HD.Entities.csproj">
       <Project>{4442CA64-82C9-4608-A845-4AB6F73028E9}</Project>
       <Name>HD.Entities</Name>
