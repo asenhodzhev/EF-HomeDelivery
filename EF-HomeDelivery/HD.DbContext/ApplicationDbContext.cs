@@ -16,8 +16,8 @@ namespace HD.DbContext
         public virtual IDbSet<City> Cities { get; set; }
 
         public ApplicationDbContext()
-            //: base("HDDevConnection", throwIfV1Schema: false)
-          : base("HDConnection", throwIfV1Schema: false)
+            : base("HDDevConnection", throwIfV1Schema: false)
+          //: base("HDConnection", throwIfV1Schema: false)
         {
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
