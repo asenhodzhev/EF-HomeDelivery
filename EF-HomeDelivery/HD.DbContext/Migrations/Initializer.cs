@@ -4,9 +4,9 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EF_Project.Common.Extensions;
 using HD.Entities;
 using HD.Entities.Common;
-using ITGigs.Common.Extensions;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 

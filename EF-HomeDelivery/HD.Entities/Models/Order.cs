@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EF_Project.Common.Extensions;
 using HD.Entities.Common;
-using ITGigs.Common.Extensions;
 
 namespace HD.Entities.Models
 {
