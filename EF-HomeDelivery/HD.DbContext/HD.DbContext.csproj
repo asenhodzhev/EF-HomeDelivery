@@ -63,9 +63,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\EF-Project\EF-Project.Common\EF-Project.Common.csproj">
-      <Project>{C83F68BC-6C78-4A71-90D1-B442158989D4}</Project>
-      <Name>EF-Project.Common</Name>
+    <ProjectReference Include="..\HD.Common\HD.Common.csproj">
+      <Project>{94606980-F9C3-491D-B9B6-177D7541D233}</Project>
+      <Name>HD.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\HD.Entities\HD.Entities.csproj">
       <Project>{4442CA64-82C9-4608-A845-4AB6F73028E9}</Project>

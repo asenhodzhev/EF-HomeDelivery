@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HD.Entities", "HD.Entities\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HD.DbContext", "HD.DbContext\HD.DbContext.csproj", "{4A3AEED7-709E-400D-9E28-BB1E08F4D9F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF-Project.Common", "..\..\EF-Project\EF-Project.Common\EF-Project.Common.csproj", "{C83F68BC-6C78-4A71-90D1-B442158989D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HD.Common", "HD.Common\HD.Common.csproj", "{94606980-F9C3-491D-B9B6-177D7541D233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{4A3AEED7-709E-400D-9E28-BB1E08F4D9F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A3AEED7-709E-400D-9E28-BB1E08F4D9F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A3AEED7-709E-400D-9E28-BB1E08F4D9F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C83F68BC-6C78-4A71-90D1-B442158989D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C83F68BC-6C78-4A71-90D1-B442158989D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C83F68BC-6C78-4A71-90D1-B442158989D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C83F68BC-6C78-4A71-90D1-B442158989D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94606980-F9C3-491D-B9B6-177D7541D233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94606980-F9C3-491D-B9B6-177D7541D233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94606980-F9C3-491D-B9B6-177D7541D233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94606980-F9C3-491D-B9B6-177D7541D233}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
