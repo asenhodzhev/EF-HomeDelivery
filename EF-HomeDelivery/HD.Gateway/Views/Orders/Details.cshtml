@@ -61,6 +61,24 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    
+    
+    
+    
+    @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+    {
+        <table>
+            <tr>
+                @Html.ActionLink("Edit", "Edit", new {id = Model.Id}) |
+                @Html.ActionLink("Back to List", "Index")
+            </tr>
+        </table>
+
+    }
+    else
+    {
+        @Html.ActionLink("Back to List", "Index")
+    }
+   
+   
 </p>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using HD.Common.Attributes;
 
 namespace HD.Gateway.DTOs
 {
@@ -21,29 +22,17 @@ namespace HD.Gateway.DTOs
 
         [Required]
         [StringLength(50)]
+        [FutureDate]
         public string Date { get; set; }
 
         [Required]
         [StringLength(50)]
+        [ValidTime]
         public string Time { get; set; }
 
-
-        //[StringLength(255)]
-        //[DataType(DataType.Date)]
-        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        //[Required]
-        //public DateTime DeliveryTime { get; set; }
-
-        //[Required]
-        //[StringLength(255)]
-        //[DataType(DataType.Date)]
-        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        //public DateTime OrderTime { get; set; }
-
-
-        //public DateTime GetDate()
-        //{
-        //    return DateTime.Parse($"{this.Date}");
-        //}
+        public DateTime GetDate()
+        {
+            return DateTime.Parse($"{this.Date} {this.Time}");
+        }
     }
 }

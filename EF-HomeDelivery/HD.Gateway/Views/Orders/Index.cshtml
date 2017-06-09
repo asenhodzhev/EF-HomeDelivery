@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Client.UserName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Client.Email)
         </th>
         <th>
@@ -35,6 +38,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.Client.UserName)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Client.Email)
         </td>
         <td>
@@ -53,9 +59,30 @@
             @Html.DisplayFor(modelItem => item.OrderTime)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            
+            @if (ViewContext.HttpContext.User.IsInRole("Guest"))
+            {
+                <table>
+                    <tr>
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) 
+                    </tr>
+                </table>
+                
+            }
+            else
+            {
+                <table>
+                    <tr>
+                        @Html.ActionLink("Edit", "Edit", new {id = item.Id})  |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+                    </tr>
+                </table>
+                
+                
+            }
+
+
         </td>
     </tr>
 }

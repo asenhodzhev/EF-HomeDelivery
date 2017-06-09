@@ -55,24 +55,21 @@ namespace HD.Gateway.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(OrderEntry entry)
         {
-            if (ModelState.IsValid)
-            {
-                var userId = User.Identity.GetUserId();
-                DateTime deliveryTime = DateTime.Parse(string.Format($"{entry.Date} {entry.Time}"));
-                //DateTime deliveryTime = DateTime.Now;
-                // deliveryTime.AddHours(1);
+            //if (ModelState.IsValid)
+            //{
                 var order = new Order(
-                    userId,
+                    User.Identity.GetUserId(),
                     entry.RestaurantId,
                     entry.Address,
                     entry.Description,
-                    deliveryTime,
+                    entry.GetDate(),
                     DateTime.Now);
 
                 db.Orders.Add(order);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }
+            //}
+           
 
             //ViewBag.ClientId = new SelectList(db.Users, "Id", "Email", entry.ClientId);
             ViewBag.RestaurantId = new SelectList(db.Restaurants, "Id", "RestaurantName", entry.RestaurantId);
